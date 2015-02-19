@@ -1,130 +1,109 @@
 <!DOCTYPE HTML>
 <html lang="pt-BR">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
 
-        <!--    arquivos do bootstrap-->
-        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
-        <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css" />
-        <link type="text/css" rel="stylesheet" href="css/style.css" />
-        <title>Guide Register</title>
-    </head>
-    <body>
+        <!--        arquivos das fontes icomoon-->
+        <link type="text/css" rel="stylesheet" href="css/styleIcomoon.css" />
 
-        <div class="navbar navbar-inverse">
-            <div class="navbar-inner">
-                <div class="container">
+    <!--    arquivos do bootstrap-->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <title>Guide Register</title>
+</head>
+<body>
+    <?php include_once './telas/includes/header.php'; ?>
+    <div class="container paginas">
+        <?php
+        if (!isset($_GET['pg'])) {
+            
+        } else {
+            switch ($_GET['pg']) {
 
-                    <!-- .btn-navbar é usado como alternador para conteúdo de barra de navegação colapsável -->
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
+// -------------------------------- Alisson - Tela de login -------------------------                  
 
-                    <!-- Tenha certeza de deixar a marca se você quer que ela seja mostrada -->
-                    <a class="brand" href="#">Nome do projeto</a>
+                case 'login':
+                    include_once './telas/login/login.php';
+                    break;
 
-                    <!-- Tudo que você queira escondido em 940px ou menos, coloque aqui -->
-                    <div class="nav-collapse">
-                        <!-- .nav, .navbar-search, .navbar-form, etc -->
-                        <ul class="nav">
-                            <div class="btn-group">
-                                <a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#">
-                                    Aluno
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Links de menu dropdown -->
+// -------------------------------- Alisson - Tela de login -------------------------   
 
-                                    <li >
-                                        <a href="#">Início</a>
-                                    </li>
-                                    <li><a href="#">Link</a></li>
-                                    <li><a href="#">Link</a></li>
-                                </ul>
-                            </div>  
-                        </ul> 
+                case 'cadastrarAluno':
+                    include_once './telas/aluno/cadastroAluno.php';
+                    break;
 
-                        <ul class="nav">
-                            <div class="btn-group">
-                                <a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#">
-                                    Professor
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Links de menu dropdown -->
+                case 'dadosAluno':
+                    include_once './telas/aluno/dadosAluno.php';
+                    break;
 
-                                    <li >
-                                        <a href="#">Início</a>
-                                    </li>
-                                    <li><a href="#">Link</a></li>
-                                    <li><a href="#">Link</a></li>
-                                </ul>
-                            </div>  
-                        </ul>  
-                        <ul class="nav">
-                            <div class="btn-group">
-                                <a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#">
-                                    Turmas
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Links de menu dropdown -->
+                case 'pesquisarAluno':
+                    include_once './telas/aluno/pesquisarAluno.php';
+                    break;
 
-                                    <li >
-                                        <a href="#">Início</a>
-                                    </li>
-                                    <li><a href="#">Link</a></li>
-                                    <li><a href="#">Link</a></li>
-                                </ul>
-                            </div>  
-                        </ul> 
-                        <ul class="nav">
-                            <div class="btn-group">
-                                <a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#">
-                                    Relatórios
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Links de menu dropdown -->
+                case 'relatorios':
+                    include_once './telas/relatorios/relatorios.php';
+                    break;
 
-                                    <li >
-                                        <a href="#">Início</a>
-                                    </li>
-                                    <li><a href="#">Link</a></li>
-                                    <li><a href="#">Link</a></li>
-                                </ul>
-                            </div>  
-                        </ul>  
-                        <ul class="nav">
-                            <div class="btn-group">
-                                <a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#">
-                                    Avisos
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Links de menu dropdown -->
+                case 'listaAvisos':
+                    include_once './telas/avisos/listaAvisos.php';
+                    break;
 
-                                    <li >
-                                        <a href="#">Início</a>
-                                    </li>
-                                    <li><a href="#">Link</a></li>
-                                    <li><a href="#">Link</a></li>
-                                </ul>
-                            </div>  
-                        </ul>  
-                    </div>
-                    <form class="navbar-search pull-left">
-                        <input type="text" class="search-query" placeholder="Busca">
-                    </form>
-                </div>
+                case 'listasdeprofessor':
+                    include_once './telas/professores/listas.php';
+                    break;
 
-            </div>
-        </div>
-    </div>
+                case 'cadastrarprofessor':
+                    include_once './telas/professores/professores.php';
+                    break;
+                case 'pesquisarprofessor':
+                    include_once './telas/professores/Pesquisar.php';
+                    break;
 
+                case 'turmaCadastrar':
+                    include_once './telas/turmas/turmaCadastrar.php';
+                    break;
+
+                case 'pesquisaTurma':
+                    include_once './telas/turmas/pesquisaTurma.php';
+                    break;
+
+                case 'resultadoDados':
+                    include_once './telas/turmas/resultadoDados.php';
+                    break;
+                
+                case 'listaAvisos':
+                    include_once './telas/avisos/listaAvisos.php';
+                    break;
+                    
+// -------------------------------- Taynara - Relatorios Inicio -------------------------              
+                case 'relPesquisarAluno':
+                    include_once './telas/relatorios/relatorios.php';
+                    break;
+
+                case 'relAtaAluno':
+                    include_once './telas/relatorios/relatorios1.php';
+                    break;
+
+                case 'relDisciplina':
+                    include_once './telas/relatorios/relatorios2.php';
+                    break;
+
+//--------------------------------- Taynara - Relatorios Fim -----------------------------    
+
+                default:
+                    break;
+            }
+        }
+        ?>
+    </div><!--    Fim container página-->
+    <?php
+    include_once './telas/includes/footer.php';
+    ?>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!--<script type="text/javascript" src="js/demo.js"></script>-->
+
 </body>
 </html>

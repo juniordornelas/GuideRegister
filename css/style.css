@@ -1,10 +1,98 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 04/02/2015, 21:28:15
-    Author     : Reginaldo
-*/
 
+/*CSS PARA TODAS AS PÁGINAS*/
+
+.paginas{
+    margin: 60px auto;
+}
+
+
+/*Página de LOGIN*/
+#login{
+    background: url("../img/bg.fw.png");
+    margin: 0 auto;
+}
+
+#login .form-horizontal{
+    margin: 0 auto;
+    margin-top: 5px;
+}
+#login .controls a{
+    float: right;
+}
+#login .controls input{
+    margin-top: 5px;
+}
+#login .control-label{
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+.control-group{
+    margin: 0 auto;  
+}
+
+body{height:100%;
+     background: url("../img/bg.fw.png");
+
+}
+/*    Gabriel Cadastro de aluno*/
+.conteinerAluno form ul{
+    list-style: none;
+    margin-left: 0;
+}
+/*    Gabriel Pesquisa de aluno*/
+.PesquisarAluno form ul{
+    list-style: none;
+    margin-left: 0;
+}
+
+/* ------------------ Taynara - Relatórios ------------------------*/
+
+.relatorios form {
+    max-width: 1052px;
+    text-align: center;
+    
+}
+.relatorios input{
+    width: 450px;
+}
+
+.pesquisardisciplina form{
+   max-width: 1052px;
+   text-align: center; 
+}
+.pesquisardisciplina select{
+    width: 500px;
+}
+.pesquisardisciplina button, select{
+      margin-top: 50px;
+}
+.ataturmas input{
+      width: 450px; 
+}
+/*-------------------Alexsander - Professores -----------------------*/
+
+.container .professores{
+    margin: left;
+}
+.container .professores form ul{
+    list-style: none;
+    margin: 0 0 10px;
+    margin-top: 10px;
+}
+.container .professores select{
+    margin-top: 0; 
+}
+.PesquisarProfessor ul{
+    list-style: none;
+    margin-left: 0; 
+}
+
+/*-------------------Marcelo - Turma -----------------------*/
+.meioTurma{margin:0auto
+}
+
+.meioTurma input{margin-top:1%}
+
+.meioTurma label{margin-top:1%}
+
+.meioTurma textArea{margin-top:3%}
